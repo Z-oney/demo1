@@ -11,5 +11,15 @@ pipeline {
                 sh 'mvn -f ./demo2/pom.xml -B -DskipTests clean package'
             }
         }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+            }
+        }
     }
 }
